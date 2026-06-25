@@ -117,6 +117,8 @@ export function treeSitterToTextChunks(
                   dim: defaultStyle.dim,
                 })
               : 0,
+            sourceStart: currentOffset,
+            sourceEnd: boundary.offset,
           })
         }
       } else {
@@ -197,6 +199,8 @@ export function treeSitterToTextChunks(
                 dim: finalStyle.dim,
               })
             : 0,
+          sourceStart: currentOffset,
+          sourceEnd: boundary.offset,
         })
       }
     } else if (currentOffset < boundary.offset) {
@@ -215,6 +219,8 @@ export function treeSitterToTextChunks(
               dim: style.dim,
             })
           : 0,
+        sourceStart: currentOffset,
+        sourceEnd: boundary.offset,
       })
     }
 
@@ -273,6 +279,8 @@ export function treeSitterToTextChunks(
             dim: style.dim,
           })
         : 0,
+      sourceStart: currentOffset,
+      sourceEnd: content.length,
     })
   }
 
