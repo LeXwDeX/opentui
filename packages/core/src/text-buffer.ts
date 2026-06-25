@@ -11,6 +11,8 @@ export interface TextChunk {
   bg?: RGBA
   attributes?: number
   link?: { url: string }
+  sourceStart?: number
+  sourceEnd?: number
 }
 
 export class TextBuffer {
